@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flashcard Quiz | CodeAlpha</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand-mark">F</div>
+      <div><p class="eyebrow">STUDY SMARTER</p><h1>Flashcard Quiz</h1></div>
+      <span class="pill">CodeAlpha Project</span>
+    </header>
+
+    <section class="intro">
+      <div>
+        <p class="eyebrow">YOUR PERSONAL STUDY SPACE</p>
+        <h2>Small cards.<br><span>Big progress.</span></h2>
+        <p class="subtext">Practice at your own pace. Reveal answers, move through your deck, and create cards for any subject.</p>
+      </div>
+      <div class="stats">
+        <div><strong id="cardCount">0</strong><span>Cards in deck</span></div>
+        <div><strong id="position">0/0</strong><span>Current card</span></div>
+      </div>
+    </section>
+
+    <section class="study-area">
+      <div class="section-heading"><div><p class="eyebrow">ACTIVE DECK</p><h3>Study cards</h3></div><span id="categoryLabel" class="tag">General</span></div>
+      <div class="flashcard" id="flashcard">
+        <div class="card-top"><span id="sideLabel">QUESTION</span><span class="sparkle">✦</span></div>
+        <div class="card-content"><p id="cardText">Loading your first card…</p></div>
+        <div class="card-bottom"><span id="cardHint">Think about your answer first</span><button id="showAnswer" class="button button-light">Show answer ↗</button></div>
+      </div>
+      <div class="progress-track"><div id="progressBar"></div></div>
+      <div class="nav-row">
+        <button id="prevBtn" class="button button-outline">← Previous</button>
+        <span id="navCount">Card 1 of 1</span>
+        <button id="nextBtn" class="button button-dark">Next →</button>
+      </div>
+    </section>
+
+    <section class="manage-area">
+      <div class="section-heading"><div><p class="eyebrow">MAKE IT YOURS</p><h3>Manage flashcards</h3></div><span class="tag tag-soft">Saved in this browser</span></div>
+      <form id="cardForm" class="editor">
+        <label>Question<input id="questionInput" maxlength="240" placeholder="e.g. What does HTML stand for?" required></label>
+        <label>Answer<textarea id="answerInput" maxlength="600" rows="3" placeholder="Write a clear answer…" required></textarea></label>
+        <div class="form-actions"><button class="button button-dark" type="submit" id="saveBtn">＋ Add flashcard</button><button class="button button-outline" type="button" id="cancelEdit" hidden>Cancel edit</button></div>
+      </form>
+      <div id="manageList" class="manage-list"></div>
+    </section>
+    <footer>Built with HTML, CSS & JavaScript · CodeAlpha Internship</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
